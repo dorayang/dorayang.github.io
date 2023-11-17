@@ -1,6 +1,90 @@
 <!DOCTYPE html>
+<html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="webstyle.css">
 
-This is my message
-<strong>My strong text</strong>
+
+<!-- Generating text elements from json file -->
+<script> 
+    function create_element(type,value, class_name, home){
+        let element = document.createElement(type);
+        element.innerHTML = value;
+        element.classList.add(class_name);
+
+        home.append(element)
+    }
+</script>
+
+<!-- Defining header content -->
+<header class="h">
+    <h1><a href="" class="home-button">Dora Yang</a></h1>
+    <nav class="header-nav">
+        <a href="#about" class="nav-button">About</a>
+        <a href="#projects" class="nav-button">Projects</a>
+        <a href="#photography" class="nav-button">Photography</a>
+        <a href="#resume" class="nav-button">Resume</a>
+    </nav>
+</header>
+
+<body class="b">
+
+    <!-- Main page introduction -->
+    <section class="intro">
+        <h2> Hi! I'm Dora  &#128075 </h2>
+        <p class="big-blocks-of-text">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu  </p>
+    </section>
+
+    <!-- Importing job info JSON file -->
+    <script src ="jobs.js">        
+    </script>
+
+    <!-- Filing in job boxes -->
+    <script>
+        var job_keys = Object.keys(jobs); // Loading job dictionary
+
+        // Section to house all job intros
+        let intro_sec = document.createElement("section");
+        intro_sec.classList.add('intros');
+
+        // Creating one section for each job
+        for (let i = 0; i < job_keys.length; i++) {
+            var job = jobs[job_keys[i]]; // Loading the job info
+
+            // Section to house info for one job
+            let job_sec = document.createElement("section");
+            job_sec.classList.add('job-intro');
+            
+            // Section to house RHS info (position, company, blurb)
+            let rhs_sec = document.createElement("section");
+            rhs_sec.classList.add('job-topline');
+            rhs_sec.classList.add('job-rhs');
+
+            // Section to house LHS info (date)
+            let lhs_sec = document.createElement("section");
+            lhs_sec.classList.add('job-topline');
+            lhs_sec.classList.add('job-lhs');
+
+            // Creating text elements for each job
+            create_element("section", "", 'job-topline', job_sec)
+            create_element("div", job.Date, 'job-date', lhs_sec)
+            create_element("div", job.Title, 'job-title', rhs_sec)
+            create_element("div", job.Company, 'job-company', rhs_sec)
+            create_element("div", job.Blurb, 'job-blurb', rhs_sec)
+
+            // Creating a hyperlink to the company website for each job
+            let job_link = document.createElement("a");
+            job_link.classList.add('job-box');
+            job_link.setAttribute('href', job.Link);
+            job_link.setAttribute('target', "blank");
+
+            // Putting all the elements together
+            job_sec.append(lhs_sec);
+            job_sec.append(rhs_sec);
+            job_link.append(job_sec);
+            intro_sec.appendChild(job_link);
+        }
+        document.body.append(intro_sec)
+    </script>
+</body>
+</html>

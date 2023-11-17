@@ -1,0 +1,112 @@
+
+/* Header Positioning */
+header {
+    position: fixed;
+    left: 8vw;
+    top: 5vw;
+}
+
+/* General link things */
+a { 
+    color: inherit; 
+    text-decoration: none;
+} 
+
+/* Header Navigation Buttons */
+a.nav-button {
+    font-family:  monospace;
+    padding: 2vw;
+}
+a.nav-button:hover {
+    text-decoration: underline;
+    text-decoration-color: darkorange;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 7px;
+}
+a.nav-button:active {
+    text-decoration: underline;
+    text-decoration-color: darkorange;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 7px;
+}
+
+/* Home Button*/
+a.home-button {
+    font-family:  monospace;
+    margin-left: 2vw;
+}
+
+/* Heading Text Style */
+h2 {
+    font-family:  monospace;
+    font-size: 40px;
+}
+
+/* Body Positioning */
+body {
+    margin-top: 20vw;
+    margin-right: 25vw;
+    margin-left: 15vw;
+}
+
+/* Paragraph Text Style */
+p.big-blocks-of-text {
+    font-family: monospace;
+}
+
+/* Single job bio section */
+section.job-intro {
+    margin-top: 5vw;
+    width: 60vw;
+    height: 10vw;
+    /* outline-offset: 10px; */
+    /* outline: auto; */
+}
+section.job-intro:hover {
+    background-color: rgba(211, 217, 227, 0.2);
+    /* outline-offset: 10px; */
+    outline-style: solid;
+    border-radius: 4pt;
+    outline-color: rgba(211, 217, 227, 0.2);
+}
+
+div.job-date{
+    font-family: monospace;
+    color: dimgray;
+}
+
+div.job-title {
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.job-company {
+    font-family: monospace;
+    color: dimgray;
+}
+
+div.job-blurb {
+    font-family: monospace;
+    margin-top: 2vw;
+}
+
+section.job-topline {
+    margin-top: 2vw;
+    margin-left: 1vw;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+section.job-rhs {
+    margin-left: 5vw;
+    text-align: left !important;
+    width: 40vh;
+}
+
+
+/* Section contaning all job intros */
+section.intros {
+    margin-top: 3vw;
+}
+
