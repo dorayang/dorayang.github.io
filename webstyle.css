@@ -1,12 +1,64 @@
 
-/* Header Positioning */
+/* Section Properties */
+/* Header*/
 header {
     position: fixed;
-    left: 8vw;
-    top: 5vw;
+    left: 6vw;
+    top: 4vw;
+    z-index: 10;
+    background-color: white;
 }
 
-/* General link things */
+/* Body */
+body {
+    margin-top: 20vw;
+    margin-right: 25vw;
+    margin-left: 15vw;
+}
+
+/* Single job bio section */
+section.job-intro {
+    margin-top: 5vw;
+    padding-bottom: 5vh;
+    width: 60vw;
+}
+section.job-intro:hover {
+    background-color: rgba(211, 217, 227, 0.2);
+    outline-style: solid;
+    border-radius: 4pt;
+    outline-color: rgba(211, 217, 227, 0.2);
+}
+
+/* Section containing multiple skills */
+section.skills{
+    margin-top: 3vw;
+    /* margin-left: 1vw;
+    display: inline-block;
+    vertical-align: text-top; */
+}
+
+/* For aligning date (LHS) andRHS blocks */
+section.job-topline {
+    margin-top: 2vw;
+    margin-left: 1vw;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+/* Job description RHS (title, company, blurb, skills) section */
+section.job-rhs {
+    margin-left: 5vw;
+    text-align: left !important;
+    width: 40vh;
+}
+
+/* Section contaning all job intros */
+section.intros {
+    margin-top: 3vw;
+}
+
+
+/* General links */
 a { 
     color: inherit; 
     text-decoration: none;
@@ -42,33 +94,11 @@ h2 {
     font-size: 40px;
 }
 
-/* Body Positioning */
-body {
-    margin-top: 20vw;
-    margin-right: 25vw;
-    margin-left: 15vw;
-}
-
 /* Paragraph Text Style */
 p.big-blocks-of-text {
     font-family: monospace;
 }
 
-/* Single job bio section */
-section.job-intro {
-    margin-top: 5vw;
-    width: 60vw;
-    height: 10vw;
-    /* outline-offset: 10px; */
-    /* outline: auto; */
-}
-section.job-intro:hover {
-    background-color: rgba(211, 217, 227, 0.2);
-    /* outline-offset: 10px; */
-    outline-style: solid;
-    border-radius: 4pt;
-    outline-color: rgba(211, 217, 227, 0.2);
-}
 
 div.job-date{
     font-family: monospace;
@@ -91,22 +121,20 @@ div.job-blurb {
     margin-top: 2vw;
 }
 
-section.job-topline {
-    margin-top: 2vw;
-    margin-left: 1vw;
+div.skill {
+    font-family: monospace;
     display: inline-block;
-    vertical-align: text-top;
-}
+    margin-top: 1.5vh;
+    margin-right: 2vh;
+    outline-style: solid;
+    border-radius: 4pt;
+    outline-color: darkorange;
+    background-color: darkorange;
+    padding-top: 0.25vh;
+    padding-bottom: 0.25vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    /* width: 10%; */
 
-section.job-rhs {
-    margin-left: 5vw;
-    text-align: left !important;
-    width: 40vh;
-}
-
-
-/* Section contaning all job intros */
-section.intros {
-    margin-top: 3vw;
 }
 

@@ -18,10 +18,10 @@
 
 <!-- Defining header content -->
 <header class="h">
-    <h1><a href="" class="home-button">Dora Yang</a></h1>
+    <h1><a href="index.html" class="home-button">Dora Yang</a></h1>
     <nav class="header-nav">
         <a href="#about" class="nav-button">About</a>
-        <a href="#projects" class="nav-button">Projects</a>
+        <a href="projects.html" class="nav-button">Projects</a>
         <a href="#photography" class="nav-button">Photography</a>
         <a href="#resume" class="nav-button">Resume</a>
     </nav>
@@ -32,7 +32,10 @@
     <!-- Main page introduction -->
     <section class="intro">
         <h2> Hi! I'm Dora  &#128075 </h2>
-        <p class="big-blocks-of-text">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu  </p>
+        <p class="big-blocks-of-text"> I'm a 2023 graduate from the University of British 
+            Columbia's Engineering Physics program. Currently in my unemployed era so pls pls pls pls 
+            hire me! I think I'm pretty cool and decent at engineering type things so I would probs be 
+            a sick employee. Thx 4 ur consideration ttyl. Also I made this website by myself #diy #awesome. </p>
     </section>
 
     <!-- Importing job info JSON file -->
@@ -78,7 +81,16 @@
             job_link.setAttribute('href', job.Link);
             job_link.setAttribute('target', "blank");
 
+            //  Creating little boxes for skills
+            var skills = job.Skills;
+            let skills_sec = document.createElement("section");
+            skills_sec.classList.add('skills');
+            for (let j = 0; j < skills.length; j++) {
+                create_element("div", skills[j], 'skill', skills_sec);
+            }
+            rhs_sec.append(skills_sec);
             
+
             // Putting all the elements together
             job_sec.append(lhs_sec);
             job_sec.append(rhs_sec);
