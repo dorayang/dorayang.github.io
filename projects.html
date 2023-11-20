@@ -11,7 +11,6 @@
         let element = document.createElement(type);
         element.innerHTML = value;
         element.classList.add(class_name);
-
         home.append(element)
     }
 </script>
@@ -26,3 +25,55 @@
         <a href="#resume" class="nav-button">Resume</a>
     </nav>
 </header>
+
+
+<body class="projects-body">
+    
+
+    <!-- Importing project info JSON file -->
+    <script src ="projects.js">        
+    </script>
+
+    <!-- Filing in job boxes -->
+    <script>
+        var project_keys = Object.keys(projects); // Loading project dictionary
+
+        // Section to house all projects
+        let intro_sec = document.createElement("section");
+        intro_sec.classList.add('p_intros');
+
+        // Creating one section for each project
+        for (let i = 0; i < project_keys.length; i++) {
+            var project = projects[project_keys[i]]; // Loading the job info
+
+            // Section to house info for one project
+            let project_sec = document.createElement("section");
+            project_sec.classList.add('project-intro');
+
+            // Creating text elements for each project
+            create_element("div", project.Year, 'project-year', project_sec)
+            create_element("div", project.Name, 'project-name', project_sec)
+
+            // adding the image! bc kinda different than text elements
+            let image = document.createElement("img");
+            image.src = project.Photo;
+            image.classList.add("project-page-image");
+            project_sec.append(image);
+
+            create_element("div", project.Description, 'project-description', project_sec)
+
+            //  Creating little boxes for skills
+            var skills = project.Skills;
+            let skills_sec = document.createElement("section");
+            skills_sec.classList.add('skills-projects');
+            for (let j = 0; j < skills.length; j++) {
+                create_element("div", skills[j], 'skill-projects', skills_sec);
+            }
+
+            project_sec.append(skills_sec);
+            intro_sec.appendChild(project_sec);
+        }
+        document.body.append(intro_sec)
+    </script>
+</body>
+</html>
