@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="webstyle.css">
+
+
+<!-- Generating text elements from json file -->
+<script> 
+    function create_element(type,value, class_name, home){
+        let element = document.createElement(type);
+        element.innerHTML = value;
+        element.classList.add(class_name);
+        home.append(element)
+    }
+</script>
+
+<!-- Defining header content -->
+<header class="h">
+    <h1><a href="index.html" class="home-button">Dora Yang</a></h1>
+    <nav class="header-nav">
+        <a href="#about" class="nav-button">About</a>
+        <a href="projects.html" class="nav-button">Projects</a>
+        <a href="photography.html" class="nav-button">Photography</a>
+        <a href="#resume" class="nav-button">Resume</a>
+    </nav>
+</header>
