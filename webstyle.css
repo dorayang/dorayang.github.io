@@ -179,3 +179,60 @@ section.skills-projects{
     margin-top: 1vw;
 }
 
+/** Photography Page` **/
+
+img.photo_single {
+    max-width: 16.5vw;
+}
+
+img.photo_double {
+    max-width: 33.3vw;
+}
+
+img {
+    position: absolute;
+    height: auto;
+}
+
+section.photo-grid {
+    margin-top: 25vh;
+    margin-left: 7.5vw;
+}
+
+img.jericho {
+    position: absolute;
+    top: 73vh;
+}
+
+div.photo-col1 {
+    position: absolute;
+    text-align: left;
+    left: 7.5vw;
+}
+
+div.photo-col2 {
+    position: absolute;
+    text-align: left;
+    left: 24.3vw;
+}
+
+div.photo-col3 {
+    position: absolute;
+    text-align: left;
+    left: 41.1vw;
+}
+
+div.photo-col4 {
+    position: absolute;
+    text-align: left;
+    left: 57.9vw;
+}
+
+div.photo-col5 {
+    position: absolute;
+    text-align: left;
+    left: 74.7vw;
+}
+
+
+
