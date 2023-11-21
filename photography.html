@@ -15,6 +15,23 @@
     }
 </script>
 
+<script> 
+    function openModal(input_img){
+        // Replacing the source of the modal image to be displayed
+        var image = document.getElementById("modal-image");
+        image.src = input_img.src;
+        var caption = document.getElementById("caption");
+        caption.innerHTML = input_img.getAttribute('cap');
+        document.getElementById("myModal").style.display = "block";
+    }
+</script>
+
+<script> 
+    function closeModal(){
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
+
 <!-- Defining header content -->
 <header class="h">
     <h1><a href="index.html" class="home-button">Dora Yang</a></h1>
@@ -27,56 +44,59 @@
 </header>
 
 <body>
+    <div id ="myModal">
+        <div id="modal-image-container">
+            <img id="modal-image">  
+        </div>
+        <div class="caption-box"><p id="caption">ijdiadshi</p></div>
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+    </div>
+    
     <section class = "photo-grid">
-        
-        <!-- Row 1 -->
-        <div class = "photo-col1" style = "top: 15vw"><img src="images/photography/1_rice_fields.png" class = "photo_single vert"></div>
-        <div class = "photo-col2" style = "top: 15vw"><img src="images/photography/2_kaylee_rock.png" class = "photo_single hori"></div>
-         <div class = "photo-col3" style = "top: 15vw"><img src="images/photography/3_split_beach.png" class = "photo_double"></div>
-        <div class = "photo-col5" style = "top: 15vw"><img src="images/photography/4_beatrice_rock.png" class = " photo_single"></div> 
+       
+        <div class = "photo-col1" style = "top: 15vw"><img src="images/photography/1_rice_fields.png" cap ="Ubud Rice Fields, Bali (2023)"t" onclick="openModal(this)" class="photo_single"> </div> 
+        <div class = "photo-col2" style = "top: 15vw"><img src="images/photography/2_kaylee_rock.png" cap ="Diamond Beach, Nusa Penida (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col3" style = "top: 15vw"><img src="images/photography/3_split_beach.png" cap = "Kasjuni Beach, Croatia (2023)" onclick="openModal(this)" class="photo_double"></div>
+        <div class = "photo-col5" style = "top: 15vw"><img src="images/photography/4_beatrice_rock.png" cap = "Murrin Park, Canada (2021)" onclick="openModal(this)" class = "photo_single"></div> 
      
-        <div class = "photo-col1" style = "top: 40.11vw;"><img src="images/photography/5_jericho_sunset.png" class = "photo_single"></div>
-        <div class = "photo-col2" style = "top: 26.17vw;"><img src="images/photography/6_lisbon_buildings.png" class = "photo_single"></div>
-        <div class = "photo-col3" style = "top: 37.34vw;"><img src="images/photography/7_joffre.png" class = "photo_single"></div>
-        <div class = "photo-col4" style = "top: 37.34vw;"><img src="images/photography/8_croatia_girls.png" class = "photo_single"></div>
-        <div class = "photo-col5" style = "top: 26.17vw;"><img src="images/photography/9_florence.png" class = "photo_single"></div>
+        <div class = "photo-col1" style = "top: 40.11vw;"><img src="images/photography/5_jericho_sunset.png" cap = "Jericho Beach, Canada (2022)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col2" style = "top: 26.17vw;"><img src="images/photography/6_lisbon_buildings.png" cap = "Lisbon, Portugal (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col3" style = "top: 37.34vw;"><img src="images/photography/7_joffre.png" cap = "Joffre Lakes, Canada (2022)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col4" style = "top: 37.34vw;"><img src="images/photography/8_croatia_girls.png" cap = "Hvar, Croatia (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col5" style = "top: 26.17vw;"><img src="images/photography/9_florence.png" cap = "Ponte Vecchio, Florence, Italy (2023)" onclick="openModal(this)" class="photo_single"></div>
 
-        <div class = "photo-col1" style = "top: 51.3vw;"><img src="images/photography/10_porto_house.png" class = "photo_double"></div>
-        <div class = "photo-col3" style = "top: 48.5vw;"><img src="images/photography/11_swiss.png" class = "photo_single"></div>   
-        <div class = "photo-col5" style = "top: 51.3vw;"><img src="images/photography/12_bros_skate.png" class = "photo_single"></div>
+        <div class = "photo-col1" style = "top: 51.3vw;"><img src="images/photography/10_porto_house.png" cap = "Fundação Serralves, Porto, Portugal (2023)"  onclick="openModal(this)" class="photo_double"></div>
+        <div class = "photo-col3" style = "top: 48.5vw;"><img src="images/photography/11_swiss.png" cap = "Interlaken, Switzerland (2023)" onclick="openModal(this)" class="photo_single"></div>   
+        <div class = "photo-col5" style = "top: 51.3vw;"><img src="images/photography/12_bros_skate.png" cap = "Banff, Canada" onclick="openModal(this)" class="photo_single"></div>
 
-        <div class = "photo-col4" style = "top: 62.6vw;"><img src="images/photography/12_bergen_house.png" class = "photo_double"></div>
-        <div class = "photo-col1" style = "top: 73.7vw;"><img src="images/photography/13_bergen.png" class = "photo_single"></div>
-        <div class = "photo-col2" style = "top: 73.7vw;"><img src="images/photography/14_sky_train.png" class = "photo_double"></div>
-        <div class = "photo-col4" style = "top: 84.9vw;"><img src="images/photography/15_jasper.png" class = "photo_single"></div>
-        <div class = "photo-col5" style = "top: 84.9vw;"><img src="images/photography/16_split.png" class = "photo_single"></div>
+        <div class = "photo-col4" style = "top: 62.6vw;"><img src="images/photography/12_bergen_house.png" cap = "Bergen, Norway (2023)" onclick="openModal(this)" class="photo_double"></div>
+        <div class = "photo-col1" style = "top: 73.7vw;"><img src="images/photography/13_bergen.png" cap = "Bergen, Norway (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col2" style = "top: 73.7vw;"><img src="images/photography/14_sky_train.png" cap = "Vancouver, Canada (2021)" onclick="openModal(this)" class="photo_double"></div>
+        <div class = "photo-col4" style = "top: 84.9vw;"><img src="images/photography/15_jasper.png" cap = "Jasper, Canada (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col5" style = "top: 84.9vw;"><img src="images/photography/16_split.png" cap = "Split, Croatia (2023)" onclick="openModal(this)" class="photo_single"></div>
 
-        <div class = "photo-col1" style = "top: 98.8vw;"><img src="images/photography/17_london.png" class = "photo_single"></div>
-        <div class = "photo-col2" style = "top: 96.2vw;"><img src="images/photography/18_hvar.png" class = "photo_single"></div>
-        <div class = "photo-col3" style = "top: 96.2vw;"><img src="images/photography/19_bench.png" class = "photo_single"></div>
-        <div class = "photo-col3" style = "top: 110.1vw;"><img src="images/photography/20_gyu.png" class = "photo_single"></div>
-        <div class = "photo-col4" style = "top: 96.2vw;"><img src="images/photography/21_cne.png" class = "photo_single"></div>
-        <div class = "photo-col5" style = "top: 110vw;"><img src="images/photography/22_chicago.png" class = "photo_single"></div>
+        <div class = "photo-col1" style = "top: 98.8vw;"><img src="images/photography/17_london.png" cap = "London, United Kingdom (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col2" style = "top: 96.2vw;"><img src="images/photography/18_hvar.png" cap = "Hvar, Croatia (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col3" style = "top: 96.2vw;"><img src="images/photography/19_bench.png" cap = "Hyde Park, London, United Kingdom (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col3" style = "top: 110.1vw;"><img src="images/photography/20_gyu.png" cap = "Beatrice & Dani :) (2021)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col4" style = "top: 96.2vw;"><img src="images/photography/21_cne.png" cap = "CNE, Toronto, Canada (2022)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col5" style = "top: 110vw;"><img src="images/photography/22_chicago.png" cap = "Chicago, United States (2023)" onclick="openModal(this)" class="photo_single"></div>
 
-        <div class = "photo-col1" style = "top: 123.9vw;"><img src="images/photography/23_hanglige.png" class = "photo_single"></div>
-        <div class = "photo-col2" style = "top: 121.5vw;"><img src="images/photography/24_seagull.png" class = "photo_single"></div>
-        <div class = "photo-col3" style = "top: 121.5vw;"><img src="images/photography/25_banff_ice.png" class = "photo_double"></div>
-        <div class = "photo-col5" style = "top: 135.2vw;"><img src="images/photography/26_camino.png" class = "photo_single"></div>
+        <div class = "photo-col1" style = "top: 123.9vw;"><img src="images/photography/23_hanglige.png" cap = "Victoria, Canda (2022)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col2" style = "top: 121.5vw;"><img src="images/photography/24_seagull.png" cap = "Portland, United States (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col3" style = "top: 121.5vw;"><img src="images/photography/25_banff_ice.png" cap = "Banff, " onclick="openModal(this)" class="photo_double"></div>
+        <div class = "photo-col5" style = "top: 135.2vw;"><img src="images/photography/26_camino.png" cap = "The Band Camino (2022)" onclick="openModal(this)" class="photo_single"></div>
 
-        <div class = "photo-col1" style = "top: 135vw;"><img src="images/photography/27_stockholm.png" class = "photo_single"></div>
-        <div class = "photo-col2" style = "top: 132.9vw;"><img src="images/photography/28_singapore.png" class = "photo_single"></div>
-        <div class = "photo-col3" style = "top: 143.9vw;"><img src="images/photography/29_bali.png" class = "photo_single"></div>
-        <div class = "photo-col4" style = "top: 143.9vw;"><img src="images/photography/30_jasper_ram.png" class = "photo_single"></div>
-        <div class = "photo-col5" style = "top: 146.5vw;"><img src="images/photography/31_diamond.png" class = "photo_single"></div>
+        <div class = "photo-col1" style = "top: 135vw;"><img src="images/photography/27_stockholm.png" cap = "Stockholm, Sweden (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col2" style = "top: 132.9vw;"><img src="images/photography/28_singapore.png" cap = "Singapore (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col3" style = "top: 143.9vw;"><img src="images/photography/29_bali.png" cap = "Nusa Penida, Indonesia (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col4" style = "top: 143.9vw;"><img src="images/photography/30_jasper_ram.png" cap = "Jasper, Canada (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col5" style = "top: 146.5vw;"><img src="images/photography/31_diamond.png" cap = "Diamond Beach, Nusa Penida (2023)" onclick="openModal(this)" class="photo_single"></div>
 
-        <div class = "photo-col1" style = "top: 158.2vw;"><img src="images/photography/32_tofino.png" class = "photo_double"></div>
-        <div class = "photo-col3" style = "top: 169vw;"><img src="images/photography/33_swedish_fika.png" class = "photo_single"></div>
-        <div class = "photo-col4" style = "top: 155.1vw;"><img src="images/photography/34_hog.png" class = "photo_single"></div>
-        <div class = "photo-col5" style = "top: 171.8vw; padding-bottom: 20vw;"><img src="images/photography/35_peeps.png" class = "photo_single"></div>
-
-        
+        <div class = "photo-col1" style = "top: 158.2vw;"><img src="images/photography/32_tofino.png" cap = "Tofino, Canada (2021)" onclick="openModal(this)" class="photo_double"></div>
+        <div class = "photo-col3" style = "top: 169vw;"><img src="images/photography/33_swedish_fika.png" cap = "Swedish Fika (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col4" style = "top: 155.1vw;"><img src="images/photography/34_hog.png" cap = "Stockholm, Sweden (2023)" onclick="openModal(this)" class="photo_single"></div>
+        <div class = "photo-col5" style = "top: 171.8vw; padding-bottom: 20vw;"><img src="images/photography/35_peeps.png" cap = "Friends at Breka on 4th (2023)" onclick="openModal(this)" class="photo_single"></div> 
     </section> 
-
-
     
 </body>

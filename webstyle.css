@@ -189,19 +189,77 @@ img.photo_double {
     max-width: 33.3vw;
 }
 
+img.photo_single:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+img.photo_double:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
 img {
     position: absolute;
     height: auto;
 }
 
+img#modal-image {
+    display: block;
+    height: 80%;
+}
+/* Modal */
+div#myModal {
+    display: none;
+    position: fixed; /* Stay in place */
+    height: 100%;
+    width:100%;
+    top:0;
+    overflow: auto;
+    z-index: +10;
+    background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
+}
+div#modal-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50vh;
+}
+
+/* The Close Button */
+span.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+span.close:hover,
+span.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p#caption {
+    color:white;
+    font-size: 14px;
+    font-family: monospace;
+    text-align: center;
+}
+div.caption-box {
+    position: absolute;
+    margin: auto;
+    margin-top: 39vh;
+    width: 100%;
+    z-index: +20;
+}
+/* Photo grid layout details */
 section.photo-grid {
     margin-top: 25vh;
     margin-left: 7.5vw;
-}
-
-img.jericho {
-    position: absolute;
-    top: 73vh;
 }
 
 div.photo-col1 {
