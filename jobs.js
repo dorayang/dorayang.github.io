@@ -20,7 +20,7 @@ var jobs = {
             "Company": "Innovation, Science and Economic Development Canada", 
             "Link": "https://tinyurl.com/3dzv34hz", 
             "Blurb": "Contributed to the technical regulations for deploying Wi-Fi and 5G devices in Canada's 6GHz band.", 
-            "Skills": []},
+            "Skills": ["Python", "Powerpoint"]},
 
         "carobot":
             {"Date": "Jun. 2019 - Aug 2019", 
