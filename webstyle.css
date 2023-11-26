@@ -296,29 +296,28 @@ span.closeProject:focus {
 }
 
 div#caveModal {
-    background-color: rgba(12,48,33,0.95); 
+    background-color: rgba(0,0,0,0.9); 
 }
 div#dynoModal {
-    background-color: rgba(129, 160, 74, 0.95); 
+    background-color: rgba(0,0,0,0.9); 
 }
 div#canModal {
-    background-color: rgba(167, 224, 200, 0.95); 
+    background-color: rgba(0,0,0,0.9); 
 }
 div#licenseModal {
-    background-color: rgba(209, 30, 53, 0.95);
+    background-color: rgba(0,0,0,0.9); 
 }
 div#doubleModal {
-    background-color: rgba(4, 91, 142, 0.95); 
+    background-color: rgba(0,0,0,0.9); 
 }
 div#robotModal {
-    background-color: rgba(255, 213, 0, 0.95);
-    display: block; 
+    background-color: rgba(0,0,0,0.9); 
 }
 div#ligoModal {
-    background-color: rgba(242, 192, 231, 0.95); 
+    background-color: rgba(0,0,0,0.9); 
 }
 div#websiteModal {
-    background-color: rgba(10, 171, 104, 0.95); 
+    background-color: rgba(0,0,0,0.9); 
 }
 
 /** Photography Page` **/
@@ -353,7 +352,7 @@ div#myModal {
     top:0;
     overflow: auto;
     z-index: +10;
-    background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 div#modal-image-container {
     display: flex;
