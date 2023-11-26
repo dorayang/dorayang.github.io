@@ -18,7 +18,7 @@ div.header {
 /* Body */
 body.b {
     margin-top: 200px;
-    margin-right: 25vw;
+    margin-right: 40vw;
     margin-left: 15vw;
 }
 /* Single job bio section */
@@ -131,13 +131,14 @@ div.project-name {
     font-family: monospace;
     font-size: 14px;
     font-weight: bold;
+    height: 28px;
 }
 div.project-description {
     font-family: monospace;
 }
 img.project-page-image {
     border-radius: 2px;
-    max-width: 30vh;
+    max-width: 35vh;
     height: auto;
     margin-top: 1vh;
 }
@@ -146,13 +147,15 @@ body.projects-body {
 }
 section.p_intros {
     margin-top: 15vh;
-    margin-left: 7vw;
+    margin-left: 3vw;
+    margin-bottom: 5vh;
 }
 section.project-intro:hover {
     background-color: rgba(211, 217, 227, 0.2);
     outline-style: solid;
     border-radius: 4pt;
     outline-color: rgba(211, 217, 227, 0.2);
+    cursor: pointer;
 }
 section.project-intro {
     margin-top: 5vw;
@@ -184,6 +187,138 @@ div.skill-projects {
 /* Section containing multiple skills */
 section.skills-projects{
     margin-top: 1vw;
+}
+
+/* Project Modal */
+div.project-modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    height: 100%;
+    width:100%;
+    top:0;
+    overflow: auto;
+    z-index: +10;
+}
+
+div.project-container {
+    width: 60%;
+    height: auto;
+    overflow: auto;
+    z-index: +15;
+    margin-left:20vw;
+    margin-right:20vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 15px;
+    background-color: white;
+}
+
+div.project-title {
+    margin-top: 2vw;
+    font-family: monospace;
+    margin-left: 3vw;
+    font-size: 18px;
+    font-weight: bold;
+}
+div.project-date {
+    font-family: monospace;
+    margin-left: 3vw;
+    color: dimgray;
+}
+div.project-background {
+    margin-top: 2vw;
+    font-family: monospace;
+    margin-left: 3vw;
+    margin-right: 4vw;
+    font-size: 12px;
+    line-height: 1.25;
+    margin-bottom: 4vh;
+}
+img.cave-poster {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%
+}
+
+img.cave-schematic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%
+}
+
+img.eqn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%
+}
+img.survey {
+    width: 33%;
+    display: inline-block;
+}
+img.dyno {
+    width: 49%;
+    display: inline-block;
+}
+a.embedded-link {
+    color: blue; 
+    text-decoration: dashed;
+    font-family: monospace;
+}
+
+a.github-link { 
+    color: blue; 
+    text-decoration: dashed;
+    font-family: monospace;
+    margin-left: 3vw; 
+} 
+div.link {
+    margin-bottom: 5vh;
+}
+
+/* The Close Button */
+span.closeProject {
+    position: absolute;
+    top: 6vh;
+    right: 21vw;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+span.closeProject:hover,
+span.closeProject:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div#caveModal {
+    background-color: rgba(12,48,33,0.95); 
+}
+div#dynoModal {
+    background-color: rgba(129, 160, 74, 0.95); 
+}
+div#canModal {
+    background-color: rgba(167, 224, 200, 0.95); 
+}
+div#licenseModal {
+    background-color: rgba(209, 30, 53, 0.95);
+}
+div#doubleModal {
+    background-color: rgba(4, 91, 142, 0.95); 
+}
+div#robotModal {
+    background-color: rgba(255, 213, 0, 0.95);
+    display: block; 
+}
+div#ligoModal {
+    background-color: rgba(242, 192, 231, 0.95); 
+}
+div#websiteModal {
+    background-color: rgba(10, 171, 104, 0.95); 
 }
 
 /** Photography Page` **/
@@ -247,15 +382,15 @@ p#caption {
     font-size: 14px;
     font-family: monospace;
     text-align: center;
-    
 }
-p.text {
+div.text {
     font-size: 12px;
     font-family: monospace;
     text-align: center;
     position: absolute;
     margin: auto;
     margin-top: 1vh;
+    margin-bottom: 1vh;
     width: 100%;
 }
 div.caption-box {
@@ -267,7 +402,7 @@ div.caption-box {
 }
 /* Photo grid layout details */
 section.photo-grid {
-    margin-top: 25vh;
+    margin-top: 22vh;
     margin-left: 7.5vw;
 }
 div.photo-col1 {
@@ -326,7 +461,7 @@ body.body-about {
 }
 
 img.about-pic {
-    height:36vh;
+    height:35vh;
     width: auto;
     display: inline-block;
     vertical-align: top;

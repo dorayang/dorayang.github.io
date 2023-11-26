@@ -19,6 +19,21 @@
     }
 </script>
 
+<script> 
+    function openModalProject(id){
+        document.getElementById(id).style.display = "block";
+    }
+</script>
+
+<script> 
+    function closeModal(id){
+        var elements = document.getElementsByClassName("project-modal");
+        for (let k = 0; k < elements.length; k++) {
+                elements[k].style.display = "none";
+            } 
+    }
+</script>
+
 <!-- Defining header content -->
 <header class="h">
     <div class = "header">
@@ -34,8 +49,237 @@
 </header>
 
 <body class="projects-body">
-    
 
+    <!-- Modal's for each project -->
+    <div class = "project-modal" id ="caveModal">
+        <div class = project-container> 
+            <span class="closeProject" onclick= closeModal() >&times;</span>
+            <div class = "project-title">Cave Rescue Communication Module</div>
+            <div class = "project-date"> 2022 - 2023</div>
+            <div class = "project-background">
+                The wireless cave communication module was my 5th year Capstone project. The project, sponsored by Dr. Carl Michal of UBC Physics and Astronomy, was 
+                inspired by the Thai soccer team that was trapped in and rescued from the flooded Tham Luang cave in 2018. <br><br>    
+
+                Dr. Michal’s vision for the project was to create a network of floating communication devices that could transmit text messages through the air and 
+                through water in parallel as a redundancy measure. My team narrowed the scope of the project to develop the underwater wireless text messaging system. 
+                By reverse engineering a fish finder we used an acoustic transducer to successfully send and receive text messages at 6 characters per second up to 100 
+                meters apart. Focusing our design on robustness, we reduced our message error rate to 2%. 
+            </div>
+            <img class="cave-poster" src="images/projects/cave/poster1.jpg" class="project-modal-image">
+            <img src="images/projects/cave/poster2.jpg" class="cave-poster" class="project-modal-image" >
+            <img src="images/projects/cave/poster3.jpg" class="cave-poster" class="project-modal-image">
+            <img src="images/projects/cave/poster4.jpg" class="cave-poster" class="project-modal-image">
+
+            <div class = "project-background">
+                Schematics for the transmit power electronics and the receive side analog to digital pulse detector created in KiCAD. On the transmit side, the flyback 
+                converter acts as a DC-DC converter boosting a 5V input up to 100V to act as a source for the H-Bridge. The H-Bridge configuration allows for a 200Vpp 
+                200kHz square wave to be applied across the transducer so that it can vibrate and transmit the messages.   
+            </div>
+            <img src="images/projects/cave/tx_schematic.png" class="cave-schematic" class="project-modal-image">
+            <img src="images/projects/cave/rx_schematic.png" class="cave-schematic" class="project-modal-image">
+
+            <div class="link"><a href="https://github.com/CharLee674/cave-comms" class="github-link" target="_blank">Transmit and receive firmware.</a></div>
+        </div>
+    </div>
+
+    <div class = "project-modal" id ="canModal">
+        <div class = project-container> 
+            <span class="closeProject" onclick= closeModal() >&times;</span>
+            <div class = "project-title">CAN Accesories PCB</div>
+            <div class = "project-date"> 2022</div>
+            
+            <div class = "project-background">
+                Controller Area Network (CANBus) is a vehicle communication standard that allows microcontrollers to communicate without having to rely on 
+                a host computer. The UBC Supermileage team uses CANBus to control the function of accessories in their urban concept vehicle. This includes 
+                sounding the horn, actuating the window wipers and turning on the headlights. <br><br>
+
+                The CAN Accessory boards consist of a microcontroller and a series of connectors that allow a modular plug and play functionality for 
+                different accessories. CANBus allows a series of boards to be connected throughout the vehicle and they can all talk to eachother.
+                <br><br>
+            </div>
+
+            <img src="images/projects/CAN/irl_pcb.jpg" class="cave-schematic">
+
+            <div class = "project-background">
+                Here's a look at the schematics and PCB I designed using KiCAD:
+            </div>
+            <img src="images/projects/CAN/schematic1.jpg" class="cave-schematic">
+            <img src="images/projects/CAN/schematic2.jpg" class="cave-schematic">
+            <img src="images/projects/CAN/schematic3.jpg" class="cave-schematic">
+            <img src="images/projects/CAN/pcb.jpg" class="cave-schematic">
+
+            <div class="link"><a href="https://github.com/supermileage/CAN-Accessories" class="github-link" target="_blank">Here's the firmware.</a></div>
+        </div>
+    </div>
+
+    <div class = "project-modal" id ="dynoModal">
+        <div class = project-container> 
+            <span class="closeProject" onclick= closeModal() >&times;</span>
+            <div class = "project-title">Dynamometer</div>
+            <div class = "project-date"> 2023</div>
+            
+            <div class = "project-background">
+                UBC Supermileage is a student team that designs super fuel efficient cars. The Dynamometer project was a collaboration between UBC Supermileage’s 
+                powertrain and electrical teams. A Dynamometer is a device that measures the torque and rpm of a motor. Our goal was to build a custom Dyno to run 
+                our competition vehicles on so that we could simulate competition track conditions. <br><br>
+            </div>
+
+            <img src="images/projects/dyno/dyno.jpg" class="dyno">
+            <img src="images/projects/dyno/dyno_render.jpg" class="dyno">
+
+            <div class = "project-background">
+                I designed the electronics for the controller. This involved testing and integrating force and optical sensors for torque and RPM measurements, 
+                designing and AC to DC convertor to use a microcontroller’s PWM signal to control a brake module, a rotary encoder for manual control of the brake, 
+                integrating an LCD screen to display live data and designing the PCB for the controller.<br><br>
+
+                Here's a look at the schematics and PCB I designed using KiCAD:
+            </div>
+            <img src="images/projects/dyno/schematic1.jpg" class="cave-schematic">
+            <img src="images/projects/dyno/schematic2.jpg" class="cave-schematic"><br><br>
+            <img src="images/projects/dyno/pcb.jpg" class="cave-schematic"><br><br>
+            
+        </div>
+    </div>
+
+    <div class = "project-modal" id ="licenseModal">
+        <div class = project-container> 
+            <span class="closeProject" onclick= closeModal() >&times;</span>
+            <div class = "project-title">Machine Learnng Parking Simulation</div>
+            <div class = "project-date"> 2021</div>
+            
+            <div class = "project-background">
+                
+                This project was implemented for UBC’s ENPH 353 course competition which was a time trial to drive through a race course and identify a series of 
+                license plates. My teammate and I’s implementation utilizes a mix of machine learning and computer vision methods written using the 
+                <a href="https://keras.io/" target="blank" class="embedded-link">Keras</a>, 
+                <a href="https://www.tensorflow.org/guide/keras" target="blank" class="embedded-link">TensorsFlow</a> and
+                <a href="https://opencv.org/" target="blank" class="embedded-link">OpenCV2</a> libraries in Python. Our solution was split into vehicle navigation, 
+                obstacle detection and license plate identification. <br><br>
+                First, the self-driving car has to efficiently navigate through. We used an imitation learning method 
+                to predict vehicle steering angles and velocity given images taken by three on-board cameras. We trained our neural network to predict one of 5 possible 
+                driving commands given an image input from a single on-board camera. The network architecture is shown below:
+            </div>
+            <img src="images/projects/license/network.jpg" class="cave-poster">
+            
+            <div class = "project-background">
+                Next, we had to consider the pedestrians and a car that acted like obstacles in the course. For obstacle detection we used gray masks tuned to the 
+                color of the pedestrian and car respectively and compared the number of gray pixels to a threshold value to determine if an obstacle was present and 
+                if the car should stop. Below we have the images that show the gray mask if an obstacle is present (left) or not (right).
+            </div>
+            <img src="images/projects/license/obstacle.jpg" class="cave-poster">
+            <div class = "project-background">
+                Finally,  we had to drive past a series of license plates and identify them. This involved generating a set of test plates that our neural network 
+                could train off of and then in the simulation, taking pictures and segmenting the characters so that our neural network could identify their value 
+                and position on the license plate.<br> <br>
+                <a href="https://github.com/dorayang/ENPH_353/tree/master" class="embedded-link" target="_blank">The code</a><br>
+                <a href="images/projects/license/ENPH353_Report.pdf" class="embedded-link" target="_blank">The report</a><br><br>
+            </div>
+        </div>
+    </div>
+
+    <div class = "project-modal" id ="doubleModal">
+        <div class = project-container> 
+            <span class="closeProject" onclick= closeModal() >&times;</span>
+            <div class = "project-title">Doublie Slit Experiment Numerical Simulation</div>
+            <div class = "project-date"> 2022</div>
+            <div class = "project-background">
+                This project consisted of a series of MATLAB simulations to study numerical/finite difference methods such as the Crank-Nicholson and Alternating Direction 
+                Implicit Methods for solving partial differential equations, specifically the 1D and 2D Schro&#776dinger equation. In quantum mechanics, Wave-particle 
+                duality states that every particle or quantum entity has both particle and wave-like properties. The non-dimensionalized Schro&#776dinger equation is given by:
+                <img src="images/projects/double/wavefnc.jpg" class="eqn" >
+                The Schro&#776dinger equation allows us to determine the wave function ψ of a system which relates the location of a particle at a given point in space(x, y, z) 
+                at a particular time (t) to the wave amplitude. The amplitude of the wave function has no real significance. However the square of the wave function, is the 
+                probability of finding an electron at a given point. <br><br>
+
+                Finite difference methods are a class of numerical techniques that convert/discretize ordinary and partial differential equations into a system of linear equations 
+                that can be solved using matrix algebra. In the simulations I implemented the <a href="https://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method" target="blank" class="embedded-link">Crank-Nicholson</a>
+                and <a href="https://en.wikipedia.org/wiki/Alternating-direction_implicit_method" target="blank" class="embedded-link">Alternating Direction Implicit Methods</a> and studied how the solutions to the wave equation 
+                changed with respect to different potentials (initial and boundary conditions). <br><br>
+            </div>
+
+            <img src="images/projects/double/2d_slit.gif" class="survey">
+            <img src="images/projects/double/2d_barrier.gif" class="survey">
+            <img src="images/projects/double/2d_trapped.gif" class="survey">
+            
+            <div class = "project-background">
+                We observe that the wave function forms a diffraction pattern with the double slit just like in the
+                <a href="https://en.wikipedia.org/wiki/Double-slit_experiment" target="blank" class="embedded-link">experiment performed by Dr. Thomas Young</a>. With the barrier 
+                we see that the wave function does not have enough energy to overcome the potential thus the probability of it ending inside the confines of the barrier is 
+                zero. Next, we consider the wave function starting inside the well which is analogous to the <a href="https://en.wikipedia.org/wiki/Particle_in_a_box" target="blank" class="embedded-link">particle in a box</a>. 
+                In a classical system a particle trapped in a box is no more likely to be found at one position over another. In a quantum system the particle may only occupy 
+                certain energy levels (related to the geometry and potential of the box) meaning it may be more likely to occupy certain positions in the box leading to the 
+                repeating eigenmode distributions in the animation.
+            </div>         
+            <div class="link"><a href="https://github.com/dorayang/double-slit" class="github-link" target="_blank">Check out the code.</a></div>
+        </div>
+    </div>
+
+    <div class = "project-modal" id ="robotModal">
+        <div class = project-container> 
+            <span class="closeProject" onclick= closeModal() >&times;</span>
+            <div class = "project-title">Recycling Robot</div>
+            <div class = "project-date"> 2020</div>
+            
+            <div class = "project-background">
+                When the world shut down due to the covid pandemic in 2020 I spent my summer in my basement designing and building this robot. My team worked on this remotely 
+                as part of the ENPH 253 robot summer competition. The objective was to design a robot that could pick up 6 empty pop cans and dump them in a recycling bin in 
+                under 60 seconds.
+            </div>
+            <img src="images/projects/robot/run2.gif" class="cave-schematic">
+            <div class = "project-background">
+                With the pandemic we had to think outside of the box and build the robot out of readily available materials instead of machining parts and I also had to do 
+                all of my circuit debugging with a handheld single channel oscilloscope which was certainly a fun challenge.<br><br>
+
+                The design my team came up with consisted of a ultrasonic distance sensor to detect the presence of cans, an IR sensor for homing navigation to the recycling 
+                bin, an H-bridge to drive the motors, a scooping arm and holding bucket that were actuated by servo motors. I soldered all of the circuits and assembled the rest 
+                of the robot using materials such as corrugated plastic, zip ties and hot glue. Check out the firmware for line following, can detection and homing 
+                <a href="https://github.com/dorayang/RobotSummer/tree/patch-5" target="blank" class="embedded-link">here.</a>
+            </div>
+            <img src="images/projects/robot/robot_drawing.jpg" class="cave-poster">
+            <img src="images/projects/robot/h-bridge.jpg" class="cave-poster">
+            <img src="images/projects/robot/sensors.jpg" class="cave-poster">
+        </div>
+    </div>
+
+    <div class = "project-modal" id ="ligoModal">
+        <div class = project-container> 
+            <span class="closeProject" onclick= closeModal() >&times;</span>
+            <div class = "project-title">Ligo Coating Tester</div>
+            <div class = "project-date"> 2021 - 2022</div>
+            <div class = "project-background">
+                This project was my 4th year capstone project. The project sponsored by the UBC Quantum Matter Institute with Dr. Kirsty Gardner, Dr. 
+                Matthew Mitchell and Dr. Jeff Young involved devising methods to study the mechanical loss associated with coatings used in LIGO’s 
+                gravitational wave interferometers. Their work involved depositing a coating on mechanical disks and then vibrating them and measuring the 
+                amount of time it took for the vibrations to stop giving them information about the loss associated with each coating. <br><br>
+
+                Our team devised a system for measuring the coating loss, redesigning the mechanical disks to better suit LIGO’s system and devising a 
+                signal processing method to isolate measurements from noise.<br><br>
+                
+                <a href="https://qmi.ubc.ca/undergraduate-research/" target="blank" class="embedded-link">Check out this article about our work.</a>
+            </div>
+            <img src="images/projects/ligo/poster1.png" class="cave-poster">
+            <img src="images/projects/ligo/poster2.png" class="cave-poster">
+            <img src="images/projects/ligo/poster3.png" class="cave-poster">
+            <img src="images/projects/ligo/poster4.jpg" class="cave-poster">
+        </div>
+        
+    </div>
+
+    <div class = "project-modal" id ="websiteModal">
+        <div class = project-container> 
+            <div class = "project-title">Personal Website</div>
+            <div class = "project-date"> 2023</div>
+            <span class="closeProject" onclick= closeModal() >&times;</span>
+
+            <div class = "project-background">
+                I created this website during my job search post graduation as a way to showcase my work experience and some interesting projects that 
+                I’ve built. I initially wanted to use a service like Squarespace to put this portfolio together but then I looked a the monthly fees and 
+                decided to use it as a fun way to learn web development (something I had a terrible time with in my 11th grade computer science class).            
+            </div>  
+            <div class="link"><a href="https://github.com/dorayang/dorayang.github.io" class="github-link" target="_blank">Check out the code.</a></div>
+        </div>
+    </div>
+    
     <!-- Importing project info JSON file -->
     <script src ="projects.js">        
     </script>
@@ -55,6 +299,8 @@
             // Section to house info for one project
             let project_sec = document.createElement("section");
             project_sec.classList.add('project-intro');
+            project_sec.id = project.ModalID;
+            project_sec.setAttribute("onclick", "openModalProject(this.id);");
 
             // Creating text elements for each project
             create_element("div", project.Year, 'project-year', project_sec)
