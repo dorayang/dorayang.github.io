@@ -4,7 +4,7 @@ var jobs = {
             "Title": "Electrical Engineer Co-op", 
             "Company": "D-Wave", 
             "Link": "https://www.dwavesys.com/", 
-            "Blurb": "Designed programmeable power supply units and test modules for quantum computers.", 
+            "Blurb": "Designed programmable power supply units and test modules for quantum computers.", 
             "Skills": ["Power Electronics", "C++", "Python", "CAD", "3D Printing", "UART", "STM32 Microcontrollers",]},
 
         "pni": 
@@ -12,7 +12,7 @@ var jobs = {
             "Title": "Instrumentation Engineer Co-op", 
             "Company": "Precision Nanosystems", 
             "Link": "https://www.precisionnanosystems.com/", 
-            "Blurb": "Created and executed tests evaluate system performance and guide component selection for a commercial nanomedicine formulation machine.", 
+            "Blurb": "Created and executed tests to evaluate system performance and guide component selection for a commercial nanomedicine formulation machine.", 
             "Skills": ["MATLAB", "Python", "Sensors", "Oscilloscopes", "PLCs", "Data Acquisition", "Labview"]},
         "ised":
             {"Date": "Jan. 2020 - Apr. 2020", 

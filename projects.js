@@ -33,7 +33,7 @@ var projects = {
         {"Name": "Double Slit Experiment Numerical Simulation", 
         "Year": "2022", 
         "Photo": "images/projects/double-slit.gif", 
-        "Description": "Study of finite diffference methods and implicit numerical solutions for the Schro&#776dinger equation", 
+        "Description": "Study of finite difference methods and implicit numerical solutions for the Schro&#776dinger equation.", 
         "Skills": ["MATLAB"],
         "ModalID": "doubleModal"},
     "recyling-bot":

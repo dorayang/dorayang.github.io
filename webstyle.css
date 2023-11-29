@@ -442,7 +442,6 @@ object.resume {
     height: 80vh;
 }
 
-
 /* About Page */
 
 p.bio-text {
@@ -455,7 +454,7 @@ div.bio {
 }
 
 body.body-about {
-    margin-top: 160px;
+    margin-top: 22vh;
     margin-right: 11vw;
     margin-left: 10vw;   
 }
