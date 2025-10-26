@@ -8,7 +8,7 @@
     <title>Dora Yang</title>
 </head>
 <!-- Generating text elements from json file -->
-<script> 
+<script>
     function create_element(type,value, class_name, home){
         let element = document.createElement(type);
         element.innerHTML = value;
@@ -25,8 +25,8 @@
         <nav class="header-nav">
             <a href="about.html" class="nav-button">About</a>
             <a href="projects.html" class="nav-button">Projects</a>
-            <a href="photography.html" class="nav-button">Photography</a>
             <a href="resume.html" class="nav-button">Resume</a>
+            <a href="photography.html" class="nav-button">Photography</a>
         </nav>
     </div>
 </header>
@@ -36,16 +36,16 @@
     <!-- Main page introduction -->
     <section class="intro">
         <h2> Hi! I'm Dora  &#128075 </h2>
-        <p class="big-blocks-of-text"> I'm a graduate from the University of British 
-            Columbia's Engineering Physics program looking for my next role designing and testing innovative hardware. I am a hardworking, adaptable and creative problem 
-            solver with experience with power electronics, PCB design, robotics and communications. <br><br>
-            
-            I am passionate about sustainable practices & design, community building and promoting diversity in STEM. I built this website to showcase some of the things I've worked on recently and to brush up on my web development skills. Enjoy!
+        <p class="big-blocks-of-text"> I'm an engineer looking for my next role developing innovative technology. I am currently a systems engineer at a medical device startup called Sibel Health and
+          I graduated with a degree in Engineering Physics from the University of British Columbia's. I am a hardworking, adaptable and creative problem
+            solver with experience with test engineering, power electronics, PCB design, robotics and communications. <br><br>
+
+            I am passionate about sustainablity, accessible healthcare, community building and promoting diversity in STEM. I built this website to showcase some of the things I've worked on recently and to brush up on my web development skills. Enjoy!
             </p>
     </section>
 
     <!-- Importing job info JSON file -->
-    <script src ="jobs.js">        
+    <script src ="jobs.js">
     </script>
 
     <!-- Filing in job boxes -->
@@ -63,7 +63,7 @@
             // Section to house info for one job
             let job_sec = document.createElement("section");
             job_sec.classList.add('job-intro');
-            
+
             // Section to house RHS info (position, company, blurb)
             let rhs_sec = document.createElement("section");
             rhs_sec.classList.add('job-topline');
@@ -95,7 +95,7 @@
                 create_element("div", skills[j], 'skill', skills_sec);
             }
             rhs_sec.append(skills_sec);
-            
+
 
             // Putting all the elements together
             job_sec.append(lhs_sec);
